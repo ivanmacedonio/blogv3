@@ -72,7 +72,7 @@ export const Login = () => {
       </div>
       <div className="foot">
         <h2>
-          <h2>Loading...</h2>
+        Failed authenticate, please <a href="/login">Login</a>
         </h2>
       </div>
     </div>
