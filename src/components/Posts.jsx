@@ -130,7 +130,7 @@ export const Posts = () => {
         </div>
       ) : (
         <h1>
-          <h2>Loading...</h2>
+           Failed authenticate, please <a href="/login">Login</a>
         </h1>
       )}
     </div>
