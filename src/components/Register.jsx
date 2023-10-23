@@ -23,7 +23,11 @@ export const Register = () => {
           "https://drfblogcrud-api.onrender.com/api/userRegister/",
           data
         );
-        redirect('/login')
+        if(res.status === 201){
+          nav('/')
+        } else {
+          console.log('error')
+        }
       } catch {
           setter(true);
           setMessage("Username already exists");

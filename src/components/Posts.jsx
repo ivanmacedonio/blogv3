@@ -28,11 +28,11 @@ export const Posts = () => {
         const headers = {
           Authorization: `Bearer ${token}`,
         };
-        const res = await axios.get("http://localhost:8000/api/postlist/", {
+        const res = await axios.get("https://fanciful-druid-e7ad4f.netlify.app/api/postlist/", {
           headers,
         });
         const resUserId = await axios.get(
-          "http://localhost:8000/api/getUser/",
+          "https://fanciful-druid-e7ad4f.netlify.app/api/getUser/",
           {
             headers,
           }
@@ -52,7 +52,7 @@ export const Posts = () => {
       setFilter(false);
     } else {
       const filter_text = data.title;
-      const res = await axios.post("http://localhost:8000/api/getPost/", {
+      const res = await axios.post("https://fanciful-druid-e7ad4f.netlify.app/api/getPost/", {
         filter_text,
       });
       setFilteredPosts(res.data.posts);
