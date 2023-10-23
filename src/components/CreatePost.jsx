@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import TextField from "@mui/material/TextField";
 import { Button } from "@mui/material";
 import { useForm } from "react-hook-form";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import "../styles/CreatePost.css";
 
@@ -93,8 +94,9 @@ export const CreatePost = () => {
           </form>
         </div>
       ) : (
+        
         <h1>
-          Failed authenticate, please <a href="/login">Login</a>
+          Loading...
         </h1>
       )}
     </div>

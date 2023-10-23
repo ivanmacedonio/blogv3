@@ -7,6 +7,7 @@ import { Button } from "@mui/material";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import "../styles/PostDetail.css";
+import { Link } from "react-router-dom";
 
 export const PostDetail = () => {
   const [post, setPosts] = useState([]);

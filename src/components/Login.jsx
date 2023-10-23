@@ -5,6 +5,8 @@ import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { Alert } from "@mui/material";
 import { Link } from "react-router-dom";
+import { redirect } from "react-router-dom";
+
 
 import "../styles/Login.css";
 import axios from "axios";
@@ -16,14 +18,20 @@ export const Login = () => {
   async function onSubmit(data) {
     try {
       const res = await axios.post(
-        "http://localhost:8000/api/loginView/",
+        "https://drfblogcrud-api.onrender.com/api/loginView/",
         data
       );
       const access = res.data;
       const username = data.username;
       localStorage.setItem("access", access.token);
       localStorage.setItem("username", username);
-      nav("/");
+      if (res.status === 202) {
+        console.log('pass')
+        nav('/')
+
+      } else {
+        console.log(res.status);
+      }
     } catch (error) {
       setError(true);
     }

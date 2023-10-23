@@ -3,9 +3,9 @@ import { useForm } from "react-hook-form";
 import TextField from "@mui/material/TextField";
 import { Button } from "@mui/material";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { redirect, useNavigate } from "react-router-dom";
 import { Alert } from "@mui/material";
-
+import { Link } from "react-router-dom";
 export const Register = () => {
   const { register, handleSubmit } = useForm();
   const [error, setter] = useState(false);
@@ -20,10 +20,10 @@ export const Register = () => {
     } else {
       try {
         const res = await axios.post(
-          "http://localhost:8000/api/userRegister/",
+          "https://drfblogcrud-api.onrender.com/api/userRegister/",
           data
         );
-        nav('/login')
+        redirect('/login')
       } catch {
           setter(true);
           setMessage("Username already exists");
@@ -82,9 +82,11 @@ export const Register = () => {
         )}
       </div>
       <div className="foot">
+        <Link to={'/login'}>
         <h2>
-          Have an account? <a href="/login">Login</a> now!
+          Have an account? Login now!
         </h2>
+        </Link>
       </div>
     </div>
   );
