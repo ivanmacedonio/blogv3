@@ -4,6 +4,7 @@ import TextField from "@mui/material/TextField";
 import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { Alert } from "@mui/material";
+import { Link } from "react-router-dom";
 
 import "../styles/Login.css";
 import axios from "axios";
@@ -19,9 +20,9 @@ export const Login = () => {
         data
       );
       const access = res.data;
-      const username = data.username
+      const username = data.username;
       localStorage.setItem("access", access.token);
-      localStorage.setItem('username', username )
+      localStorage.setItem("username", username);
       nav("/");
     } catch (error) {
       setError(true);
@@ -62,7 +63,7 @@ export const Login = () => {
         </div>
       </form>
       <div className="errorcontainer">
-      {error ? (
+        {error ? (
           <Alert severity="error">
             <h2>Failed to authenticate credentials!</h2>
           </Alert>
@@ -71,9 +72,9 @@ export const Login = () => {
         )}
       </div>
       <div className="foot">
-        <h2>
-        Failed authenticate, please <a href="/login">Login</a>
-        </h2>
+        <Link to={"/register"}>
+          <h2>Dont have an account? Register now for free!</h2>
+        </Link>
       </div>
     </div>
   );
