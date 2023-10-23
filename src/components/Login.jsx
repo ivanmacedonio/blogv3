@@ -17,7 +17,21 @@ export const Login = () => {
 
   async function onSubmit(data) {
     try {
-      nav('/')
+      const res = await axios.post(
+        "https://drfblogcrud-api.onrender.com/api/loginView/",
+        data
+      );
+      const access = res.data;
+      const username = data.username;
+      localStorage.setItem("access", access.token);
+      localStorage.setItem("username", username);
+      if (res.status === 202) {
+        console.log('pass')
+        nav('/')
+
+      } else {
+        console.log(res.status);
+      }
     } catch (error) {
       setError(true);
     }
