@@ -26,7 +26,7 @@ export const PostDetail = () => {
           Authorization: `Bearer ${token}`,
         };
         const res = await axios.get(
-          `http://localhost:8000/api/postdetail/${params.id}/`,
+          `https://drfblogcrud-api.onrender.com/api/postdetail/${params.id}/`,
           {
             headers,
           }
@@ -54,7 +54,7 @@ export const PostDetail = () => {
       Authorization: `Bearer ${token}`,
     };
     const update = await axios.patch(
-      `http://localhost:8000/api/postdetail/${params.id}/`,
+      `https://drfblogcrud-api.onrender.com/api/postdetail/${params.id}/`,
       data,
       {
         headers,
@@ -69,7 +69,7 @@ export const PostDetail = () => {
     const headers = {
       Authorization: `Bearer ${token}`,
     };
-    await axios.delete(`http://localhost:8000/api/postdetail/${params.id}/`, {
+    await axios.delete(`https://drfblogcrud-api.onrender.com/api/postdetail/${params.id}/`, {
       headers,
     });
     nav("/");
