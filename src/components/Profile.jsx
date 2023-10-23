@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import { RenderPosts } from "../components/RenderPosts";
+import { RenderPosts } from "./RenderPosts";
 import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import "../styles/Profile.css";

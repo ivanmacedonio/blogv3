@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { RenderPosts } from "../components/RenderPosts";
+import { RenderPosts } from "./RenderPosts";
 import { Button } from "@mui/material";
 import { TextField } from "@mui/material";
 import { useForm } from "react-hook-form";

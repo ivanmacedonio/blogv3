@@ -1,10 +1,11 @@
-import { Posts } from "../pages/Posts";
-import { CreatePost } from "../pages/CreatePost";
+import { Posts } from "../components/Posts";
+import { CreatePost } from "../components/CreatePost";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import { PostDetail } from "../pages/PostDetail";
-import { Login } from "../pages/Login";
-import { Register } from "../pages/Register";
-import { Profile } from "../pages/Profile";
+import { PostDetail } from "../components/PostDetail";
+import { Login } from "../components/Login";
+import { LoginPage } from "../pages/LoginPage";
+import { Register } from "../components/Register";
+import { Profile } from "../components/Profile";
 
 export const AppRouter = () => {
   return (
@@ -12,7 +13,7 @@ export const AppRouter = () => {
       <Routes>
         <Route path="/" element={<Posts></Posts>} />
         <Route path="/register" element={<Register></Register>} />
-        <Route path="/login" element={<Login></Login>} />
+        <Route path="/login" element={<LoginPage></LoginPage>} />
         <Route path="/create" element={<CreatePost></CreatePost>} />
         <Route path="/postdetail/:id" element={<PostDetail></PostDetail>} />
         <Route path="/profile/:id" element={<Profile></Profile>} />
