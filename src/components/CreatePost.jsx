@@ -20,7 +20,6 @@ export const CreatePost = () => {
       "Content-Type": "multipart/form-data",
     };
     const formData = new FormData();
-    formData.append("image", image); // 'image' es el nombre del campo donde deseas enviar la imagen
     formData.append("title", data.title);
     formData.append("description", data.description);
     console.log(formData);
@@ -81,9 +80,6 @@ export const CreatePost = () => {
                 variant="outlined"
                 {...register("description")}
               />
-            </div>
-            <div className="button">
-              <input type="file" onChange={handleImage} />
             </div>
 
             <div className="button">
