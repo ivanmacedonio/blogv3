@@ -6,6 +6,7 @@ import { Button } from "@mui/material";
 import { TextField } from "@mui/material";
 import { useForm } from "react-hook-form";
 import "../styles/Posts.css";
+import { Link } from "react-router-dom";
 
 export const Posts = () => {
   const [posts, setPosts] = useState([]);
@@ -130,7 +131,7 @@ export const Posts = () => {
         </div>
       ) : (
         <h1>
-           Failed authenticate, please <a href="/login">Login</a>
+           <Link to={'/login'}>Please login</Link>
         </h1>
       )}
     </div>

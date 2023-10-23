@@ -14,6 +14,10 @@ export const Login = () => {
 
   async function onSubmit(data) {
     try {
+      const res = await axios.post(
+        "http://localhost:8000/api/loginView/",
+        data
+      );
       const access = res.data;
       const username = data.username
       localStorage.setItem("access", access.token);
