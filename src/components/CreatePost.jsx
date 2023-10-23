@@ -27,7 +27,7 @@ export const CreatePost = () => {
     if ((data.title === "") | (data.description === "")) {
       console.log('error');
     } else {
-      await axios.post("https://drfblogcrud-api.onrender.com/api/postlist/", formData, {
+      await axios.post("http://localhost:8000/api/postlist/", formData, {
         headers,
       });
       navigate("/");

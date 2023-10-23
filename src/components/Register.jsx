@@ -20,7 +20,7 @@ export const Register = () => {
     } else {
       try {
         const res = await axios.post(
-          "https://drfblogcrud-api.onrender.com/api/userRegister/",
+          "http://localhost:8000/api/userRegister/",
           data
         );
         nav('/login')

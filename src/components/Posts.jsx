@@ -27,11 +27,11 @@ export const Posts = () => {
         const headers = {
           Authorization: `Bearer ${token}`,
         };
-        const res = await axios.get("https://drfblogcrud-api.onrender.com/api/postlist/", {
+        const res = await axios.get("http://localhost:8000/api/postlist/", {
           headers,
         });
         const resUserId = await axios.get(
-          "https://drfblogcrud-api.onrender.com/api/getUser/",
+          "http://localhost:8000/api/getUser/",
           {
             headers,
           }
@@ -51,7 +51,7 @@ export const Posts = () => {
       setFilter(false);
     } else {
       const filter_text = data.title;
-      const res = await axios.post("https://drfblogcrud-api.onrender.com/api/getPost/", {
+      const res = await axios.post("http://localhost:8000/api/getPost/", {
         filter_text,
       });
       setFilteredPosts(res.data.posts);

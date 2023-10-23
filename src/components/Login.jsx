@@ -15,7 +15,7 @@ export const Login = () => {
   async function onSubmit(data) {
     try {
       const res = await axios.post(
-        "https://drfblogcrud-api.onrender.com/api/loginView/",
+        "http://localhost:8000/api/loginView/",
         data
       );
       const access = res.data;

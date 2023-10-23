@@ -14,7 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Posts></Posts>}/>
         <Route path="/register" element={<Register></Register>}/>
-        <Route path="https://lucky-empanada-1139f4.netlify.app/login" element={<Login></Login>}/>
+        <Route path="/login" element={<Login></Login>}/>
         <Route path="/create" element={<CreatePost></CreatePost>}/>
         <Route path="/postdetail/:id" element={<PostDetail></PostDetail>}/>
         <Route path="/profile/:id" element={<Profile></Profile>}/>

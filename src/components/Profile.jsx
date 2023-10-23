@@ -20,11 +20,11 @@ export const Profile = () => {
           Authorization: `Bearer ${token}`,
         };
         const res = await axios.get(
-          `https://drfblogcrud-api.onrender.com/api/userList/${params.id}`,
+          `http://localhost:8000/api/userList/${params.id}`,
           { headers }
         );
         const resPosts = await axios.get(
-          `https://drfblogcrud-api.onrender.com/api/postListFiltered/`,
+          `http://localhost:8000/api/postListFiltered/`,
           {
             headers,
           }
