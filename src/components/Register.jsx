@@ -24,7 +24,7 @@ export const Register = () => {
           data
         );
         if(res.status === 201){
-          nav('/')
+          nav('/login')
         } else {
           console.log('error')
         }

@@ -131,7 +131,7 @@ export const Posts = () => {
         </div>
       ) : (
         <h1>
-           <Link to={'/login'}>Please login</Link>
+           Loading...
         </h1>
       )}
     </div>
